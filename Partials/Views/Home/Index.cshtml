@@ -1,0 +1,20 @@
+﻿@model List<Partials.Models.Kurs>
+
+<div>
+    <ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.Partial("_PartialModel", item)
+        </li>
+    }
+    </ul>
+</div>
+
+<div>
+    @Html.Action("ShowTimePartial")
+</div>
+<br />
+<div>
+    @Html.Action("ShowTime")
+</div>
